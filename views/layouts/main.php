@@ -104,7 +104,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                                 <?php endif;?>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<?=\yii\helpers\Url::to(['/cart/view'])?>"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="<?=\yii\helpers\Url::to(['/admin'])?>"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -326,11 +326,16 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
     'footer'=>
         '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупку</button>
              <button type="button" class="btn btn-default">Оформить заказ</button>',
-    'clientOptions' => false
-]);
-\yii\bootstrap5\Modal::end();
+    'clientOptions' => false,
 
-*/?>
+    'options'=>[
+            'class'=>'my-modal'
+    ]
+]);
+\yii\bootstrap5\Modal::end();*/
+
+?>
+
 
 <?php $this->endBody() ?>
 </body>

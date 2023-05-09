@@ -7,6 +7,27 @@
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
 	};
 
+/*
+
+	$('#card .table-t').on('click','.clear1' function (e){
+		e.preventDefault();
+		var id = $(this).data('id')
+	$.ajax({
+		url:'/cart/clear',
+		type: 'GET',
+		success: function(res){
+			if(!res) alert('Хмм... Какая то ошибка');
+			if(res) alert('Карзина очищена!');
+		},
+		error: function (){
+			alert('Ошибочка вышла!');
+		}
+
+	});
+
+*/
+
+
 function showCart(cart){
 	$('#cart .modal-body') .html(cart);
 	$('#cart') .modal();

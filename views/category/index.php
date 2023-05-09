@@ -5,25 +5,8 @@
 use yii\helpers\Html;
 ?>
 
-<div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section id="slider"><!--slider-->
+<!--slider-->
+<section id="slider">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -86,7 +69,8 @@ use yii\helpers\Html;
             </div>
         </div>
     </div>
-</section><!--/slider-->
+</section>
+<!--/slider-->
 
 <section>
     <div class="container">
@@ -130,7 +114,6 @@ use yii\helpers\Html;
 
 
             <div class="col-sm-9 padding-right">
-            <?php debug(Yii::$app->user->identity);?>
                 <?php if( !empty($hits)) : ?>
                     <div class="features_items"><!--features_items-->
                         <h2 class="title text-center">Features Items </h2>
@@ -553,3 +536,4 @@ use yii\helpers\Html;
         </div>
     </div>
 </section>
+
