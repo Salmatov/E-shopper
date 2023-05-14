@@ -88,8 +88,8 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
                             </li>
                             <li class="dropdown"><a href="#">Товары<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="<?=\yii\helpers\Url::to('/admin')?>">Список товаров</a></li>
-                                    <li><a href="<?=\yii\helpers\Url::to('/admin')?>">Создать товар</a></li>
+                                    <li><a href="<?=\yii\helpers\Url::to('/admin/product')?>">Список товаров</a></li>
+                                    <li><a href="<?=\yii\helpers\Url::to('/admin/product/create')?>">Создать товар</a></li>
                                 </ul>
                             </li>
                             <li><a href="<?=\yii\helpers\Url::to('/admin/order')?>">Заказы</a></li>

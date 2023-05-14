@@ -9,6 +9,16 @@ $config = [
     'bootstrap' => ['log'],
     'language'=> 'ru-RU',
     'defaultRoute'=>'category/index',
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'path' => 'upload/global',
+                'name' => 'Global'
+            ],
+        ]
+    ],
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
