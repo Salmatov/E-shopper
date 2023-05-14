@@ -71,6 +71,10 @@ a#scrollUp i{
   background: none repeat scroll 0 0 #F0F0E9;
 }
 
+.header_top_black {
+  background: none repeat scroll 0 0 #080808;
+}
+
 .contactinfo ul li:first-child{
     margin-left: -15px;
 }
@@ -2403,10 +2407,10 @@ h2.title {
 }
 
 .btn.btn-primary {
-  background:#FE980F;
+ /* background:#FE980F;
   border: 0 none;
   border-radius: 0;
-  margin-top: 16px;
+  margin-top: 16px;*/
 }
 
 .blank-arrow {

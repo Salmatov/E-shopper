@@ -4,11 +4,8 @@
 /** @var string $content */
 
 use app\assets\AppAsset;
-use app\widgets\Alert;
-use yii\bootstrap5\Breadcrumbs;
-use yii\bootstrap5\Html;
-use yii\bootstrap5\Nav;
-use yii\bootstrap5\NavBar;
+use yii\bootstrap\Breadcrumbs;
+use yii\bootstrap\Html;
 
 AppAsset::register($this);
 
@@ -16,13 +13,11 @@ $this->registerCsrfMetaTags();
 $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
+    <?php $this->head()?>
     <?php
     $this->registerJsFile('js/html5shiv.js',['position'=>\yii\web\View::POS_HEAD, 'condition'=>'lte IE9']);
     $this->registerJsFile('js/respond.min.js',['position'=>\yii\web\View::POS_HEAD, 'condition'=>'lte IE9']);
@@ -65,7 +60,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 
 		<div class="header-middle"><!--header-middle-->
 			<div class="container">
-				<div class="row"> 
+				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
 							<a href = "<?= \yii\helpers\Url::home()?>"><?=Html::img('@web/images/home/logo.png',
@@ -320,8 +315,8 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 
 <!--
 --><?php
-/*\yii\bootstrap5\Modal::begin([
-    'title'=>'Корзина',
+\yii\bootstrap\Modal::begin([
+    'header'=>'Корзина',
     'id'=>'cart',
     'footer'=>
         '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупку</button>
@@ -332,7 +327,7 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
             'class'=>'my-modal'
     ]
 ]);
-\yii\bootstrap5\Modal::end();*/
+\yii\bootstrap\Modal::end();
 
 ?>
 

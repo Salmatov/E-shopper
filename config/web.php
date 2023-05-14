@@ -12,7 +12,9 @@ $config = [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
-            'layout' => 'admin'
+            'layout' => 'admin',
+            'defaultRoute'=>'order/index'
+
         ],
     ],
     'aliases' => [
@@ -40,6 +42,14 @@ $config = [
             'viewPath' => '@app/mail',
             // send all mails to a file by default.
             'useFileTransport' => true,
+/*            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.rambler.ru',
+                'username' => 'salmatov90',
+                'password' => 'St612345',
+                'port' => '465',
+                'encryption' => 'ssl',
+            ],*/
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

@@ -5,9 +5,24 @@ use yii\widgets\ActiveForm;
 
 ?>
 <div class="container">
+    <?php if (Yii::$app->session->hasFlash('success')):?>
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <?php echo Yii::$app->session->getFlash('success');?>
+            </button>
+        </div>
+    <?php endif;?>
+    <?php if (Yii::$app->session->hasFlash('error')):?>
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <?php echo Yii::$app->session->getFlash('error');?>
+            </button>
+        </div>
+    <?php endif;?>
 
-
-<?php if(!empty($_SESSION['cart'])): ?>
+<?php if(!empty($_SESSION['cart'])){ ?>
 
     <div class="table-responsive ">
         <table class="table table-hover table-striped"></table>
@@ -45,7 +60,9 @@ use yii\widgets\ActiveForm;
         </table>
     </div>
 
-<?php endif; ?>
+<?php }else {?>
+    <h2>Корзина пуста</h2>
+<?php }?>
 
 <br>
 <br>
@@ -60,7 +77,3 @@ use yii\widgets\ActiveForm;
 <br>
 <br>
 </div>
-
-
-
-

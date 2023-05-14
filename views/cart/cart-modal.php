@@ -1,6 +1,6 @@
 <?php if(!empty($session['cart'])):?>
     <div class="table-responsive">
-        <table class="table table-hover table-striped"></table>
+        <table class="table table-hover table-striped">
         <thead>
             <tr>
                 <th>Фото</th>
