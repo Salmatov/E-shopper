@@ -11,7 +11,11 @@ $this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
+<?php
+    $img = $model->getImage();
+?>
 <div class="product-view">
+
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -40,7 +44,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'price',
             'keywords',
             'description',
-            'img',
+            //'image',
+
+            [
+                'attribute'=>'image',
+                'value'=>"<img src = '{$img->getUrl('300x')}'>",
+                'format'=>'html'
+            ],
+
             [
                 'attribute'=>'hit',
                 'value'=>function($data){
